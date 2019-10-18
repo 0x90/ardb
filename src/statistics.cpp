@@ -116,7 +116,7 @@ OP_NAMESPACE_BEGIN
                 }
             }
 
-            char tmp[1024];
+            char tmp[1044];
             snprintf(tmp, sizeof(tmp) - 1, "coststat_%s_%s:calls=%" PRIu64 ",costs=%" PRIu64 ",cost_per_call=%" PRIu64 ",percents=%.4f%%", name.c_str(), range, recs[i].count,
                     recs[i].cost, recs[i].cost / recs[i].count, (double(recs[i].count) / double(recs[0].count)) * 100);
             cb(tmp, data);
